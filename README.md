@@ -1,58 +1,119 @@
-# Portfolio Website
+# 🚀 Parth Gajjar – Portfolio Website
 
-This is a personal portfolio website built using Vite+React, Tailwind CSS, and Framer Motion to showcase my skills, projects, and experience.
-
-## Features
-- **Responsive Design** – Works on all screen sizes.
-- **Smooth Animations** – Powered by Framer Motion for interactive user experience.
-- **Dark Mode Support** – Stylish UI with light and dark theme toggling.
-- **Optimized Performance** – Efficient rendering and smooth navigation.
-- **SEO Friendly** – Optimized for better search engine visibility.
-
-## Tech Stack
-- **Frontend:** React.js
-- **Styling:** Tailwind CSS
-- **Animations:** Framer Motion
-
-## Installation & Setup
-
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/sathishk-dev/illustration-portfolio.git
-   ```
-2. Navigate to the project directory:
-   ```sh
-   cd illustration-portfolio
-   ```
-3. Install dependencies:
-   ```sh
-   npm install
-   ```
-4. Start the development server:
-   ```sh
-   npm run dev
-   ```
-   The app will be available at `http://localhost:3000/`.
-
-## Demo
-Check out the live demo of the portfolio website: [Live Demo](https://sk-illustration-portfolio.netlify.app/)
-
-## Deployment
-To deploy the portfolio website, you can use platforms like:
-- **Vercel**
-- **Netlify**
-- **GitHub Pages** (with additional configurations)
-
-## How to Contribute
-If you’d like to contribute or improve this project, feel free to fork the repository and submit a pull request.
-
-## 🙌 Show Your Support
-If you like this project, please star it and share it with your friends!
-
-## Contact
-If you have any questions or suggestions, feel free to reach out via:
-- **Email:** sathish31102004@gmail.com
-- **LinkedIn:** [@sathishk-dev](https://linkedin.com/in/sathishk-dev)
+This is my personal portfolio website built using **React.js, Vite, Tailwind CSS, and Framer Motion** to showcase my skills, projects, and professional experience as a Frontend Engineer.
 
 ---
-Made with ❤️ by Sathish Kumar.
+
+## ✨ Features
+
+* ⚡ **Modern UI/UX** – Clean, minimal, and responsive design across all devices
+* 🎯 **Smooth Animations** – Powered by Framer Motion for better user experience
+* 📱 **Fully Responsive** – Optimized for mobile, tablet, and desktop
+* 🚀 **Performance Optimized** – Fast loading and efficient rendering
+* 🔍 **SEO Friendly** – Structured content for better visibility
+* 🧠 **Real-world Showcase** – Highlights projects involving charts, payments, authentication, and APIs
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+
+* React.js
+* TypeScript
+* Tailwind CSS
+
+### State & Data Handling
+
+* Redux Toolkit
+* React Query
+
+### Integrations
+
+* Razorpay & PayPal (Payment Integration)
+* Google & Apple Authentication
+* JWT Authentication Flow
+* REST APIs
+
+### Other Tools
+
+* Framer Motion (Animations)
+* Git & GitHub
+
+---
+
+## 📂 Project Setup
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/your-username/your-portfolio.git
+```
+
+### 2. Navigate to Project
+
+```bash
+cd your-portfolio
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Run Development Server
+
+```bash
+npm run dev
+```
+
+App will run at:
+
+```
+http://localhost:5173/
+```
+
+---
+
+## 🌐 Live Demo
+
+👉 [View Portfolio](https://your-live-link.com)
+
+---
+
+## 🚀 Deployment
+
+You can deploy this project using:
+
+* Vercel
+* Netlify
+* GitHub Pages
+
+---
+
+## 📌 Highlights
+
+* Built scalable UI components with reusable architecture
+* Implemented authentication flows (JWT, Google, Apple)
+* Integrated payment systems (Razorpay, PayPal)
+* Developed dashboards with charts and real-time data handling
+* Focused on performance optimization and clean code practices
+
+---
+
+## 📬 Contact
+
+* 📧 Email: [your-email@gmail.com](mailto:your-email@gmail.com)
+* 💼 LinkedIn: https://linkedin.com/in/your-username
+* 💻 GitHub: https://github.com/your-username
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub!
+
+---
+
+Made with ❤️ by **Parth Gajjar**
