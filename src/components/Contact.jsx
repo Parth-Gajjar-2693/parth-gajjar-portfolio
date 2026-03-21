@@ -1,8 +1,8 @@
-import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { BiLogoGmail } from 'react-icons/bi';
-import { BsGithub } from 'react-icons/bs';
-import { IoLogoLinkedin, IoLogoTwitter } from 'react-icons/io5';
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { BiLogoGmail } from "react-icons/bi";
+import { BsGithub } from "react-icons/bs";
+import { IoLogoLinkedin, IoLogoTwitter } from "react-icons/io5";
 import { IoMdMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
 
@@ -14,98 +14,122 @@ export default function Contact() {
     <motion.div
       ref={ref}
       initial={{ opacity: 0 }}
-      animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+      animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
-      className='lg:my-16 lg:px-28 my-8 px-5'
-      id='contact'
+      className="lg:my-16 lg:px-28 my-10 px-5"
+      id="contact"
     >
+      {/* HEADING */}
       <motion.h2
-        initial={{ y: -50, opacity: 0 }}
-        animate={isInView ? { y: 0, opacity: 1 } : { opacity: 0 }}
-        transition={{ duration: 0.8 }}
-        className='text-2xl lg:text-4xl text-center'
+        initial={{ y: -40, opacity: 0 }}
+        animate={isInView ? { y: 0, opacity: 1 } : {}}
+        className="text-3xl lg:text-5xl text-center"
       >
-        Contact <span className='font-extrabold'>Me</span>
+        Contact <span className="font-extrabold">Me</span>
       </motion.h2>
 
-      <div className='flex justify-between items-center mt-8 lg:mt-16 flex-col lg:flex-row'>
+      <div className="flex flex-col lg:flex-row gap-12 mt-10 lg:mt-16 items-start">
+        {/* LEFT - FORM */}
         <motion.div
-          initial={{ x: -50, opacity: 0 }}
-          animate={isInView ? { x: 0, opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 0.8 }}
-          className='lg:w-[40%]'
+          initial={{ x: -40, opacity: 0 }}
+          animate={isInView ? { x: 0, opacity: 1 } : {}}
+          className="lg:w-1/2 w-full"
         >
-          <form className='w-full space-y-3 lg:space-y-5'>
-            <input className='border-2 px-5 py-3 border-black rounded placeholder:text-[#71717A] text-sm w-full' type="text" placeholder='Your name' required />
-            <input className='border-2 px-5 py-3 border-black rounded placeholder:text-[#71717A] text-sm w-full' type="email" placeholder='Email' required />
-            <input className='border-2 px-5 py-3 border-black rounded placeholder:text-[#71717A] text-sm w-full' type="text" placeholder='Your website (If exists)' />
-            <textarea className='resize-none border-2 px-5 py-3 h-32 border-black placeholder:text-[#71717A]  rounded text-sm w-full' placeholder='How can I help?*'></textarea>
+          <form className="space-y-4 border border-gray-200 rounded-2xl p-6 shadow-sm">
+            <input
+              type="text"
+              placeholder="Your name"
+              required
+              className="w-full px-4 py-3 rounded border border-gray-300 focus:border-black outline-none text-sm transition"
+            />
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0 }}
-              transition={{ duration: 0.8 }}
-              className='flex justify-between gap-3 lg:gap-5 flex-col lg:flex-row'
+            <input
+              type="email"
+              placeholder="Email"
+              required
+              className="w-full px-4 py-3 rounded border border-gray-300 focus:border-black outline-none text-sm transition"
+            />
+
+            <input
+              type="text"
+              placeholder="Your website (optional)"
+              className="w-full px-4 py-3 rounded border border-gray-300 focus:border-black outline-none text-sm transition"
+            />
+
+            <textarea
+              placeholder="How can I help?"
+              className="w-full px-4 py-3 h-32 rounded border border-gray-300 focus:border-black outline-none text-sm resize-none transition"
+            />
+
+            {/* BUTTON */}
+            <motion.button
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              className="w-full bg-black text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition"
             >
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                type='submit'
-                className='bg-black justify-center w-fit lg:w-auto lg:flex-1 hover:shadow-lg text-white px-3 py-2 rounded flex items-center gap-x-3 font-medium'
-              >
-                Get In Touch
-              </motion.button>
+              Send Message
+            </motion.button>
 
-              <div className='flex items-center gap-x-2 lg:gap-x-5'>
-                {[BiLogoGmail, IoLogoLinkedin, IoLogoTwitter, BsGithub].map((Icon, index) => (
+            {/* SOCIAL */}
+            <div className="flex justify-center gap-4 pt-3">
+              {[BiLogoGmail, IoLogoLinkedin, IoLogoTwitter, BsGithub].map(
+                (Icon, index) => (
                   <motion.a
                     key={index}
                     href="#"
-                    className="bg-white p-2 lg:p-3 rounded border-2 border-black"
-                    whileHover={{ scale: 1.1, backgroundColor: "#000", color: "#fff" }}
-                    whileTap={{ scale: 0.9 }}
+                    whileHover={{ scale: 1.15 }}
+                    className="p-2 border border-gray-300 rounded-lg hover:bg-black hover:text-white transition"
                   >
-                    <Icon className="w-4 h-4 lg:w-5 lg:h-5" />
+                    <Icon className="w-4 h-4" />
                   </motion.a>
-                ))}
-              </div>
-            </motion.div>
+                )
+              )}
+            </div>
           </form>
         </motion.div>
 
+        {/* RIGHT - INFO */}
         <motion.div
-          initial={{ x: 50, opacity: 0 }}
-          animate={isInView ? { x: 0, opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 0.8 }}
-          className='lg:w-1/2'
+          initial={{ x: 40, opacity: 0 }}
+          animate={isInView ? { x: 0, opacity: 1 } : {}}
+          className="lg:w-1/2 w-full space-y-6"
         >
-          <div className='font-extrabold text-2xl lg:text-5xl mt-5 lg:mt-0 space-y-1 lg:space-y-3'>
-            <h2>Let's <span className='text-white' style={{ WebkitTextStroke: '1px black' }}>talk</span> for</h2>
-            <h2>Something special</h2>
+          <div className="text-3xl lg:text-5xl font-extrabold leading-tight">
+            <h2>
+              Let’s build something{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-black to-gray-500">
+                great
+              </span>
+            </h2>
           </div>
 
-          <p className='text-[#71717A] text-sm/6 lg:text-base mt-3 lg:mt-6'>I seek to push the limits of creativity to create high-engaging, user-friendly, and memorable interactive experiences.</p>
+          <p className="text-gray-600 text-sm lg:text-base leading-relaxed">
+            I build scalable systems and high-performance applications. If you
+            have an idea, product, or problem — let’s connect and make it happen.
+          </p>
 
-          <div className='font-semibold text-sm lg:text-xl flex flex-col mt-6 gap-2 lg:gap-4'>
+          {/* CONTACT INFO */}
+          <div className="space-y-4 text-sm lg:text-base font-medium">
             <motion.a
               whileHover={{ x: 5 }}
-              className='flex items-center gap-2 group'
-              href="mailto:Youremail@gmail.com"
+              href="mailto:youremail@gmail.com"
+              className="flex items-center gap-3 group"
             >
-              <span className='border-2 transition-all border-transparent group-hover:border-black rounded-full p-1'>
-                <IoMdMail className="w-4 h-4 lg:w-5 lg:h-5" />
+              <IoMdMail />
+              <span className="group-hover:underline">
+                youremail@gmail.com
               </span>
-              Youremail@gmail.com
             </motion.a>
 
             <motion.a
               whileHover={{ x: 5 }}
-              className='flex items-center gap-2 group'
-              href="tele:1234567890"
+              href="tel:1234567890"
+              className="flex items-center gap-3 group"
             >
-              <span className='border-2 transition-all border-transparent group-hover:border-black rounded-full p-[5px]'>
-                <FaPhone className="w-3 h-3 lg:w-4 lg:h-4" />
+              <FaPhone />
+              <span className="group-hover:underline">
+                +91 1234567890
               </span>
-              1234567890
             </motion.a>
           </div>
         </motion.div>
