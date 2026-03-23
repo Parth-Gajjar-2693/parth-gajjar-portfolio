@@ -6,6 +6,18 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 
 export default [
   { ignores: ['dist'] },
+
+  // ✅ BACKEND (Node.js)
+  {
+    files: ['server/**/*.js', 'server.js'], // or ['backend/**/*.js'] if folder
+    languageOptions: {
+      globals: globals.node,
+      sourceType: 'module',
+    },
+    rules: js.configs.recommended.rules,
+  },
+
+  // ✅ FRONTEND (React)
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
