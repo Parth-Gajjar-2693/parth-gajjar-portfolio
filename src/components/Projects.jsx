@@ -44,7 +44,7 @@ export default function Projects() {
   const [openId, setOpenId] = useState(null);
 
   return (
-    <div className="bg-black px-5 lg:px-28 py-10 lg:py-20">
+    <div className="bg-black px-5 lg:px-28 py-10 lg:py-20" id="projects">
       <h2 className="text-3xl lg:text-5xl text-center text-white mb-12">
         My <span className="font-extrabold">Projects</span>
       </h2>
