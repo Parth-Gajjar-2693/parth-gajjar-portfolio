@@ -5,6 +5,7 @@ import { BsGithub } from "react-icons/bs";
 import { IoLogoLinkedin, IoLogoTwitter } from "react-icons/io5";
 import { IoMdMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
+import { toast } from "react-hot-toast";
 
 export default function Contact() {
   const ref = useRef(null);
@@ -35,12 +36,13 @@ export default function Contact() {
       });
 
       const data = await res.json();
-
       if (data.success) {
         setStatus("success");
+        toast.success("Message sent 🚀");
         e.target.reset();
       } else {
         setStatus("error");
+        toast.error("Something went wrong ❌");
       }
     } catch (err) {
       console.error(err);
@@ -89,8 +91,8 @@ export default function Contact() {
                   field === "name"
                     ? "Your name"
                     : field === "email"
-                    ? "Email"
-                    : "Your website (optional)"
+                      ? "Email"
+                      : "Your website (optional)"
                 }
                 required={field !== "website"}
                 disabled={loading}
@@ -118,27 +120,6 @@ export default function Contact() {
               )}
               {loading ? "Sending..." : "Send Message"}
             </motion.button>
-
-            {/* STATUS MESSAGE */}
-            {status === "success" && (
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="text-green-500 text-sm text-center"
-              >
-                ✅ Message sent successfully!
-              </motion.p>
-            )}
-
-            {status === "error" && (
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="text-red-500 text-sm text-center"
-              >
-                ❌ Something went wrong. Try again.
-              </motion.p>
-            )}
 
             {/* SOCIAL */}
             <div className="flex justify-center gap-4 pt-3">
@@ -179,24 +160,20 @@ export default function Contact() {
           <div className="space-y-4 text-sm lg:text-base font-medium">
             <motion.a
               whileHover={{ x: 5 }}
-              href="mailto:youremail@gmail.com"
+              href="mailto:parthgajjar127@gmail.com"
               className="flex items-center gap-3 group"
             >
               <IoMdMail />
-              <span className="group-hover:underline">
-                youremail@gmail.com
-              </span>
+              <span className="group-hover:underline">parthgajjar127@gmail.com</span>
             </motion.a>
 
             <motion.a
               whileHover={{ x: 5 }}
-              href="tel:1234567890"
+              href="tel:8320054936"
               className="flex items-center gap-3 group"
             >
               <FaPhone />
-              <span className="group-hover:underline">
-                +91 1234567890
-              </span>
+              <span className="group-hover:underline">+91 8320054936</span>
             </motion.a>
           </div>
         </motion.div>
