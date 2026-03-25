@@ -6,6 +6,7 @@ import { IoLogoLinkedin } from "react-icons/io5";
 import { IoMdMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
 import { toast } from "react-hot-toast";
+import emailjs from "@emailjs/browser";
 
 const socialLinks = [
   {
@@ -35,12 +36,19 @@ export default function Contact() {
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState(null); // success | error
+  const [lastSentTime, setLastSentTime] = useState(0);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // 🚫 simple spam protection (5 sec cooldown)
+    const now = Date.now();
+    if (now - lastSentTime < 5000) {
+      toast.error("Wait a few seconds before sending again ⏳");
+      return;
+    }
+
     setLoading(true);
-    setStatus(null);
 
     const formData = {
       name: e.target.name.value,
@@ -50,26 +58,19 @@ export default function Contact() {
     };
 
     try {
-      const res = await fetch("http://localhost:5000/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      await emailjs.send(
+        "service_zouqyid",        
+        "template_2u5t76r",      
+        formData,
+        "CJEiMNDg7d8NYxJkV"       
+      );
 
-      const data = await res.json();
-      if (data.success) {
-        setStatus("success");
-        toast.success("Message sent 🚀");
-        e.target.reset();
-      } else {
-        setStatus("error");
-        toast.error("Something went wrong ❌");
-      }
+      toast.success("Message sent 🚀");
+      e.target.reset();
+      setLastSentTime(now);
     } catch (err) {
       console.error(err);
-      setStatus("error");
+      toast.error("Failed to send ❌");
     } finally {
       setLoading(false);
     }
@@ -104,7 +105,6 @@ export default function Contact() {
             onSubmit={handleSubmit}
             className="space-y-4 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-md backdrop-blur bg-white/60 dark:bg-white/5"
           >
-            {/* INPUTS */}
             {["name", "email", "website"].map((field) => (
               <input
                 key={field}
@@ -114,8 +114,8 @@ export default function Contact() {
                   field === "name"
                     ? "Your name"
                     : field === "email"
-                      ? "Email"
-                      : "Your website (optional)"
+                    ? "Email"
+                    : "Your website (optional)"
                 }
                 required={field !== "website"}
                 disabled={loading}
@@ -131,7 +131,6 @@ export default function Contact() {
               className="w-full px-4 py-3 h-32 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent focus:ring-2 focus:ring-black dark:focus:ring-white outline-none text-sm resize-none transition"
             />
 
-            {/* BUTTON */}
             <motion.button
               whileHover={{ scale: loading ? 1 : 1.03 }}
               whileTap={{ scale: loading ? 1 : 0.97 }}
@@ -148,7 +147,6 @@ export default function Contact() {
             <div className="flex justify-center gap-4 pt-3">
               {socialLinks.map((item, index) => {
                 const Icon = item.icon;
-
                 return (
                   <motion.a
                     key={index}
@@ -166,7 +164,7 @@ export default function Contact() {
           </form>
         </motion.div>
 
-        {/* RIGHT */}
+        {/* RIGHT SIDE */}
         <motion.div
           initial={{ x: 40, opacity: 0 }}
           animate={isInView ? { x: 0, opacity: 1 } : {}}
@@ -202,7 +200,9 @@ export default function Contact() {
               className="flex items-center gap-3 group"
             >
               <FaPhone />
-              <span className="group-hover:underline">+91 8320054936</span>
+              <span className="group-hover:underline">
+                +91 8320054936
+              </span>
             </motion.a>
           </div>
         </motion.div>
