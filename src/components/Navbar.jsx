@@ -36,15 +36,30 @@ export default function Navbar() {
         }`}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <motion.img
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={() => scrollToSection("home")}
-          className="h-9 cursor-pointer"
-          src="/assets/logo.svg"
-          alt="Logo"
-        />
+  <motion.div
+  onClick={() => scrollToSection("home")}
+  whileTap={{ scale: 0.9 }}
+  className="relative h-10 w-10 flex items-center justify-center cursor-pointer group"
+>
+  {/* Rotating Border */}
+  <motion.div
+    animate={{ rotate: 360 }}
+    transition={{ repeat: Infinity, duration: 6, ease: "linear" }}
+    className="absolute inset-0 rounded-md border-2 border-black"
+  />
 
+  {/* Glass + Hover Fill */}
+  <div className="relative h-full w-full flex items-center justify-center rounded-md backdrop-blur-md bg-white/40 border border-black overflow-hidden">
+    
+    {/* Hover Fill Layer */}
+    <span className="absolute inset-0 bg-black scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-300 z-0"></span>
+
+    {/* Text */}
+    <span className="relative z-10 font-bold text-sm text-black group-hover:text-white transition-colors duration-300">
+      PG
+    </span>
+  </div>
+</motion.div>
         <ul className="hidden lg:flex items-center gap-x-7 font-semibold">
           {["about", "skills", "projects", "contact"].map((section) => (
             <motion.li

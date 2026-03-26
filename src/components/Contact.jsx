@@ -1,35 +1,9 @@
 import React, { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { BiLogoGmail } from "react-icons/bi";
-import { BsGithub } from "react-icons/bs";
-import { IoLogoLinkedin } from "react-icons/io5";
 import { IoMdMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
 import { toast } from "react-hot-toast";
 import emailjs from "@emailjs/browser";
-
-const socialLinks = [
-  {
-    icon: BiLogoGmail,
-    href: "mailto:parthgajjar127@gmail.com",
-    label: "Email",
-  },
-  {
-    icon: IoLogoLinkedin,
-    href: "https://www.linkedin.com/in/parth-gajjar-b1b547274/",
-    label: "LinkedIn",
-  },
-  {
-    icon: FaPhone,
-    href: "tel:+918320054936",
-    label: "Call",
-  },
-  {
-    icon: BsGithub,
-    href: "https://github.com/Parth-Gajjar-2693",
-    label: "GitHub",
-  },
-];
 
 export default function Contact() {
   const ref = useRef(null);
@@ -142,25 +116,6 @@ export default function Contact() {
               )}
               {loading ? "Sending..." : "Send Message"}
             </motion.button>
-
-            {/* SOCIAL */}
-            <div className="flex justify-center gap-4 pt-3">
-              {socialLinks.map((item, index) => {
-                const Icon = item.icon;
-                return (
-                  <motion.a
-                    key={index}
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.15, y: -2 }}
-                    className="p-2 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-black hover:text-white transition"
-                  >
-                    <Icon className="w-4 h-4" />
-                  </motion.a>
-                );
-              })}
-            </div>
           </form>
         </motion.div>
 
