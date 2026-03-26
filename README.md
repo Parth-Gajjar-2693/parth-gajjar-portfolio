@@ -1,46 +1,20 @@
-# 🚀 Parth Gajjar – Portfolio Website
+🚀 Parth Gajjar – Frontend Engineer Portfolio
 
-This is my personal portfolio website built using **React.js, Vite, Tailwind CSS, and Framer Motion** to showcase my skills, projects, and professional experience as a Frontend Engineer.
-
----
-
-## ✨ Features
-
-* ⚡ **Modern UI/UX** – Clean, minimal, and responsive design across all devices
-* 🎯 **Smooth Animations** – Powered by Framer Motion for better user experience
-* 📱 **Fully Responsive** – Optimized for mobile, tablet, and desktop
-* 🚀 **Performance Optimized** – Fast loading and efficient rendering
-* 🔍 **SEO Friendly** – Structured content for better visibility
-* 🧠 **Real-world Showcase** – Highlights projects involving charts, payments, authentication, and APIs
+A high-performance, modern portfolio built with React, Vite, Tailwind CSS, and Framer Motion — designed to showcase real-world product experience, not just UI.
 
 ---
 
-## 🛠 Tech Stack
+⚡ What This Portfolio Shows
 
-### Frontend
+This isn’t just a design showcase — it reflects how I build production-grade frontend apps:
 
-* React.js
-* TypeScript
-* Tailwind CSS
-
-### State & Data Handling
-
-* Redux Toolkit
-* React Query
-
-### Integrations
-
-* Razorpay & PayPal (Payment Integration)
-* Google & Apple Authentication
-* JWT Authentication Flow
-* REST APIs
-
-### Other Tools
-
-* Framer Motion (Animations)
-* Git & GitHub
-
+Scalable component architecture
+Real-time data handling & charts
+Payment integrations (Razorpay / PayPal)
+Authentication systems (JWT, Google, Apple)
+Performance-first development
 ---
+
 
 ## 📂 Project Setup
 
@@ -78,8 +52,7 @@ http://localhost:5173/
 
 ## 🌐 Live Demo
 
-👉 [View Portfolio](https://your-live-link.com)
-
+👉 https://parth-gajjar-portfolio.vercel.app/
 ---
 
 ## 🚀 Deployment
@@ -90,25 +63,6 @@ You can deploy this project using:
 * Netlify
 * GitHub Pages
 
----
-
-## 📌 Highlights
-
-* Built scalable UI components with reusable architecture
-* Implemented authentication flows (JWT, Google, Apple)
-* Integrated payment systems (Razorpay, PayPal)
-* Developed dashboards with charts and real-time data handling
-* Focused on performance optimization and clean code practices
-
----
-
-## 📬 Contact
-
-* 📧 Email: [your-email@gmail.com](mailto:your-email@gmail.com)
-* 💼 LinkedIn: https://linkedin.com/in/your-username
-* 💻 GitHub: https://github.com/your-username
-
----
 
 ## ⭐ Support
 
