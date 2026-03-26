@@ -5,38 +5,38 @@ import { motion, AnimatePresence } from "framer-motion";
 const projects = [
   {
     id: 1,
-    title: "AgriGuru Online",
+    title: "AgriGuru Online – Global B2B Agri‑Commodities Platform",
     duration: "Apr 2025 – Present",
     description:
-      "A global agricultural commodity trading platform used across web, Android, and iOS with real-time trading, analytics, and subscription workflows.",
+      "AgriGuru Online is a global B2B web and mobile platform that connects agri‑commodity exporters, importers, buyers, and sellers by providing real‑time product prices, ocean freight rates, and smart trade documentation in one dashboard. The platform helps users discover offers, manage inquiries, and streamline the pre‑trade to post‑trade process using AI‑driven insights and intuitive workflows.",
     features: [
-      "Optimized large dataset rendering for smooth performance across 10+ years of data in chart",
-      "Built complete inquiry and negotiation workflows including document management",
+      "Responsive dashboards with real‑time updates on commodity prices and offers.",
+      "Product and inquiry management UI for listing, searching, and tracking agri‑commodities.",
+      "Inquiry and offer flow components (send, reply, negotiate, and track status).",
+      "Document and compliance information sections for export/import checklists and guidelines.",
+      "User‑friendly layouts and reusable components built with React.js for a fast, consistent experience.",
       "Implemented Google, Apple, and JWT authentication",
       "Integrated Razorpay & PayPal subscriptions",
-      "Built scalable modules for product, freight & analytics",
-      "Handled real-time workflows and API integrations",
-      "Multilingual support (EN, AR, FR, CN)",
-      "Used Redis caching & BullMQ queues",
     ],
     image: "/assets/agriguru-logo.png",
     link: "https://agriguruonline.com/",
   },
   {
     id: 2,
-    title: "Diamond Sales Platform",
+    title: "MyMemo Admin Panel – Web‑based Admin Dashboard",
     duration: "Jan 2025 – Mar 2025",
     description:
-      "A multi-role diamond sales and purchase platform supporting vendors, brokers, employees, and customers.",
+      "A comprehensive admin dashboard powering the MyMemo platform, enabling teams to manage users, content, analytics, and configurations across web & mobile applications with real-time insights and role-based access.",
     features: [
-      "Built React-based sales & inventory workflows",
-      "Real-time dashboards and stock tracking",
-      "Role-based UI rendering",
-      "Backend architecture + API development",
-      "Performance optimization across workflows",
+      "Complete React.js admin UI with responsive dashboards, tables, forms, and modals",
+      "Real-time user & content management with search, pagination, filters, and bulk actions",
+      "Role-based UI rendering (admin, moderator, support) with conditional access controls",
+      "Interactive workflows for user lifecycle (onboard, monitor, suspend, analytics)",
+      "Performance-optimized components with React hooks, memoization, and API caching",
+      "Secure form handling, validation, and file upload interfaces for content management",
     ],
     image: "/assets/diamond-sales-logo.png",
-    link: "#",
+    link: "#",  
   },
 ];
 
@@ -72,9 +72,7 @@ export default function Projects() {
               {/* CONTENT */}
               <div className="p-6 text-white space-y-4">
                 <div>
-                  <h3 className="text-xl font-bold">
-                    {project.title}
-                  </h3>
+                  <h3 className="text-xl font-bold">{project.title}</h3>
                   <p className="text-xs text-gray-400 mt-1">
                     {project.duration}
                   </p>
@@ -105,9 +103,7 @@ export default function Projects() {
                 <div className="border-t border-white/10 pt-4 flex items-center justify-between">
                   {/* SHOW MORE */}
                   <button
-                    onClick={() =>
-                      setOpenId(isOpen ? null : project.id)
-                    }
+                    onClick={() => setOpenId(isOpen ? null : project.id)}
                     className="text-xs text-gray-400 hover:text-white transition"
                   >
                     {isOpen ? "Show less ↑" : "Show more ↓"}
