@@ -32,34 +32,34 @@ export default function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={`fixed lg:px-28 px-5 top-0 left-0 w-full z-50 bg-white p-5 transition-shadow duration-300 ${hasShadow ? "shadow-md" : "shadow-none"
-        }`}
+      className={`fixed lg:px-28 px-5 top-0 left-0 w-full z-50 bg-white p-5 transition-shadow duration-300 ${
+        hasShadow ? "shadow-md" : "shadow-none"
+      }`}
     >
       <div className="container mx-auto flex justify-between items-center">
-  <motion.div
-  onClick={() => scrollToSection("home")}
-  whileTap={{ scale: 0.9 }}
-  className="relative h-10 w-10 flex items-center justify-center cursor-pointer group"
->
-  {/* Rotating Border */}
-  <motion.div
-    animate={{ rotate: 360 }}
-    transition={{ repeat: Infinity, duration: 6, ease: "linear" }}
-    className="absolute inset-0 rounded-md border-2 border-black"
-  />
+        <motion.div
+          onClick={() => scrollToSection("home")}
+          whileTap={{ scale: 0.9 }}
+          className="relative h-10 w-10 flex items-center justify-center cursor-pointer group"
+        >
+          {/* Rotating Border */}
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, duration: 6, ease: "linear" }}
+            className="absolute inset-0 rounded-md border-2 border-black"
+          />
 
-  {/* Glass + Hover Fill */}
-  <div className="relative h-full w-full flex items-center justify-center rounded-md backdrop-blur-md bg-white/40 border border-black overflow-hidden">
-    
-    {/* Hover Fill Layer */}
-    <span className="absolute inset-0 bg-black scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-300 z-0"></span>
+          {/* Glass + Hover Fill */}
+          <div className="relative h-full w-full flex items-center justify-center rounded-md backdrop-blur-md bg-white/40 border border-black overflow-hidden">
+            {/* Hover Fill Layer */}
+            <span className="absolute inset-0 bg-black scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-300 z-0"></span>
 
-    {/* Text */}
-    <span className="relative z-10 font-bold text-sm text-black group-hover:text-white transition-colors duration-300">
-      PG
-    </span>
-  </div>
-</motion.div>
+            {/* Text */}
+            <span className="relative z-10 font-bold text-sm text-black group-hover:text-white transition-colors duration-300">
+              PG
+            </span>
+          </div>
+        </motion.div>
         <ul className="hidden lg:flex items-center gap-x-7 font-semibold">
           {["about", "skills", "projects", "contact"].map((section) => (
             <motion.li
@@ -85,10 +85,16 @@ export default function Navbar() {
           <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
           <span className="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
           <span className="relative text-black group-hover:text-white flex items-center gap-x-3">
-            Resume <TbDownload size={16} />
+            <a
+              href="https://drive.google.com/file/d/1Nk9KECnIn-isRtuWrdQauQITwN7uaLfu/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative text-black group-hover:text-white flex items-center gap-x-3"
+            >
+              Resume <TbDownload size={16} />
+            </a>
           </span>
         </motion.a>
-
         <motion.button
           className="lg:hidden text-2xl"
           onClick={() => setIsOpen(!isOpen)}
@@ -134,7 +140,14 @@ export default function Navbar() {
                 <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
                 <span className="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
                 <span className="relative text-black group-hover:text-white flex items-center gap-x-3">
-                  Resume <TbDownload size={16} />
+                  <a
+                    href="https://drive.google.com/file/d/1Nk9KECnIn-isRtuWrdQauQITwN7uaLfu/view?usp=drive_link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative text-black group-hover:text-white flex items-center gap-x-3"
+                  >
+                    Resume <TbDownload size={16} />
+                  </a>
                 </span>
               </motion.a>
             </ul>
