@@ -36,24 +36,26 @@ export default function About() {
 
         <div className="space-y-4 lg:space-y-6 mt-5 lg:mt-8">
           <p className="text-[#71717A] text-sm lg:text-base leading-relaxed">
-            Frontend Engineer with 1.5+ years of experience building scalable
-            and high-performance web applications using React.js and TypeScript.
-            Skilled in developing dynamic user interfaces, handling complex
-            state management, and optimizing application performance.
+            Frontend Developer with 2+ years of experience building scalable,
+            responsive, and high-performance web applications using React.js,
+            Next.js, and TypeScript. Skilled in developing dynamic user
+            interfaces, managing complex application states, and optimizing
+            performance.
           </p>
 
           <p className="text-[#71717A] text-sm lg:text-base leading-relaxed">
-            Experienced in working on real-world projects including dashboards,
-            data visualization, and form-heavy workflows. Integrated third-party
-            services such as Razorpay and PayPal, and implemented secure
-            authentication systems using JWT, Google, and Apple login.
+            Experienced in developing real-world applications involving dynamic
+            dashboards, data visualization, API integrations, and complex form
+            workflows. Proficient in using modern UI libraries and CSS
+            frameworks such as Tailwind CSS, Material UI, and Bootstrap to
+            create intuitive user experiences.
           </p>
 
           <p className="text-[#71717A] text-sm lg:text-base leading-relaxed">
-            Strong focus on reusable component architecture, responsive design,
-            and delivering clean, maintainable code. Comfortable collaborating
-            with teams and clients to solve real business problems and deliver
-            production-ready solutions.
+            Passionate about writing clean, reusable, and maintainable code
+            while solving practical business problems. Currently strengthening
+            my backend development skills with Node.js and learning NestJS to
+            grow into a well-rounded Full-Stack Developer.
           </p>
         </div>
       </motion.div>

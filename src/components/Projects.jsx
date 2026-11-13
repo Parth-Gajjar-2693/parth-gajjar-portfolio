@@ -5,18 +5,20 @@ import { motion, AnimatePresence } from "framer-motion";
 const projects = [
   {
     id: 1,
-    title: "AgriGuru Online – Global B2B Agri‑Commodities Platform",
-    duration: "Apr 2025 – Present",
+    title: "AgriGuru Online – Global B2B Agri-Commodities Platform",
+    duration: "Apr 2025 – Nov 2026",
     description:
-      "AgriGuru Online is a global B2B web and mobile platform that connects agri‑commodity exporters, importers, buyers, and sellers by providing real‑time product prices, ocean freight rates, and smart trade documentation in one dashboard. The platform helps users discover offers, manage inquiries, and streamline the pre‑trade to post‑trade process using AI‑driven insights and intuitive workflows.",
+      "AgriGuru Online is a global B2B web and mobile platform connecting agri-commodity exporters, importers, buyers, and sellers. It provides real-time commodity prices, ocean freight rates, product inquiries, offers, and smart trade documentation. The ecosystem includes a public-facing website and two dedicated admin panels for managing marketing activities and core business operations.",
     features: [
-      "Responsive dashboards with real‑time updates on commodity prices and offers.",
-      "Product and inquiry management UI for listing, searching, and tracking agri‑commodities.",
-      "Inquiry and offer flow components (send, reply, negotiate, and track status).",
-      "Document and compliance information sections for export/import checklists and guidelines.",
-      "User‑friendly layouts and reusable components built with React.js for a fast, consistent experience.",
-      "Implemented Google, Apple, and JWT authentication",
-      "Integrated Razorpay & PayPal subscriptions",
+      "Developed responsive frontend interfaces using React.js, Next.js, and TypeScript based on project requirements.",
+      "Built the public-facing website to showcase agricultural commodities, services, and platform features.",
+      "Developed a Marketing Admin Panel to manage website content, marketing modules, banners, and promotional sections.",
+      "Developed a Business Management Admin Panel for managing products, inquiries, offers, and smart trade documentation.",
+      "Implemented dynamic dashboards, data tables, filters, and reusable components for efficient administration.",
+      "Integrated Google, Apple, and JWT authentication.",
+      "Integrated Razorpay and PayPal payment gateways for subscription management.",
+      "Implemented complex forms, API integrations, and interactive workflows to streamline business operations.",
+      "Focused on responsive design, maintainable component architecture, and application performance.",
     ],
     image: "/assets/agriguru-logo.png",
     link: "https://agriguruonline.com/",
@@ -36,7 +38,7 @@ const projects = [
       "Secure form handling, validation, and file upload interfaces for content management",
     ],
     image: "/assets/diamond-sales-logo.png",
-    link: "#",  
+    link: "https://www.mymemo.in/",
   },
 ];
 

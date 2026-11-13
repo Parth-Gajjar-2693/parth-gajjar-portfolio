@@ -19,7 +19,7 @@ const socialLinks = [
   },
   {
     icon: FiPhone,
-    href: "tel:+918320054936", 
+    href: "tel:+918320054936",
     label: "Call",
   },
   {
@@ -52,36 +52,33 @@ export default function Home() {
               },
             }}
           >
+            Hello,{" "}
+            <TypeAnimation
+              sequence={[
+                "I'm Parth Gajjar",
+                1500,
+                "I build scalable web applications",
+                1500,
+                "I develop with React & Next.js",
+                1500,
+                "I'm exploring Full-Stack Development",
+                1500,
+              ]}
+              speed={40}
+              deletionSpeed={50}
+              style={{ fontWeight: 600 }}
+              repeat={Infinity}
+            />
             <motion.h2
               variants={{
                 hidden: { opacity: 0, y: 10 },
                 visible: { opacity: 1, y: 0 },
               }}
+              className="font-extrabold"
             >
-              Hello,{" "}
-              <TypeAnimation
-                sequence={[
-                  "I am Parth Gajjar",
-                  1000,
-                  "I build scalable UIs",
-                  1000,
-                  "I solve real problems",
-                  1000,
-                ]}
-                speed={20}
-                style={{ fontWeight: 600 }}
-                repeat={Infinity}
-              />
-            </motion.h2>
-            <motion.h2
-              variants={{
-                hidden: { opacity: 0, y: 10 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
-              <span className="font-extrabold">Frontend</span>{" "}
+              <span>Software</span>{" "}
               <span
-                className="text-white font-extrabold"
+                className="text-white"
                 style={{ WebkitTextStroke: "1px black" }}
               >
                 Developer
@@ -103,17 +100,19 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
           >
-            I’m a frontend developer with 1.5+ years of experience building
-            scalable, high-performance web applications using React and modern
-            JavaScript. I specialize in crafting clean UI architectures,
-            handling complex state management, and optimizing performance for
-            large-scale applications. I’ve worked on real-world products
-            involving dynamic charts, real-time data handling, form-heavy
-            workflows, and role-based systems. I focus on writing maintainable
-            code, improving user experience, and solving practical business
-            problems — not just building screens. Currently, I’m expanding into
-            backend development with Node.js and exploring system design to
-            become a more complete full-stack engineer.
+            I’m a Frontend Developer with 2+ years of experience building
+            scalable, responsive, and high-performance web applications using
+            React.js and Next.js, depending on project requirements. I
+            specialize in developing clean UI architectures, managing complex
+            application states, and creating intuitive user experiences using
+            modern CSS frameworks and UI libraries. I’ve worked on real-world
+            applications involving dynamic dashboards, data visualization, API
+            integrations, form-heavy workflows, and role-based systems. I focus
+            on writing clean, maintainable code, optimizing performance, and
+            delivering solutions that solve practical business problems.
+            Currently, I have a foundational understanding of Node.js and am
+            actively learning NestJS to strengthen my backend skills and grow
+            into a well-rounded Full-Stack Developer.
           </motion.p>
 
           <motion.div

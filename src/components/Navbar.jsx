@@ -86,7 +86,7 @@ export default function Navbar() {
           <span className="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
           <span className="relative text-black group-hover:text-white flex items-center gap-x-3">
             <a
-              href="https://drive.google.com/file/d/1Nk9KECnIn-isRtuWrdQauQITwN7uaLfu/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1bXNPZLAjfpBOPmKt4LcD4N6X5Bfftaj3/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="relative text-black group-hover:text-white flex items-center gap-x-3"
@@ -141,7 +141,7 @@ export default function Navbar() {
                 <span className="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
                 <span className="relative text-black group-hover:text-white flex items-center gap-x-3">
                   <a
-                    href="https://drive.google.com/file/d/1Nk9KECnIn-isRtuWrdQauQITwN7uaLfu/view?usp=drive_link"
+                    href="https://drive.google.com/file/d/1bXNPZLAjfpBOPmKt4LcD4N6X5Bfftaj3/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="relative text-black group-hover:text-white flex items-center gap-x-3"

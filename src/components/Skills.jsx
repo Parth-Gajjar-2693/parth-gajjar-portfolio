@@ -1,26 +1,25 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaJs, FaReact, FaPaypal, FaApple } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
+import { FaJs, FaReact, FaNodeJs, FaBootstrap, FaHtml5 } from "react-icons/fa";
 import {
   SiTypescript,
+  SiNextdotjs,
   SiRedux,
-  SiChartdotjs,
-  SiRazorpay,
+  SiReactquery,
+  SiNestjs,
+  SiMui,
+  SiPostman,
   SiOpenai,
+  SiChartdotjs,
+  SiExpress,
 } from "react-icons/si";
 import { BsGithub } from "react-icons/bs";
-import {
-  MdSecurity,
-  MdDevices,
-  MdViewModule,
-  MdDesignServices,
-} from "react-icons/md";
+import { MdSecurity, MdDevices } from "react-icons/md";
 import { RiTailwindCssFill } from "react-icons/ri";
 
 export default function Skills() {
   const [skills] = useState([
-    // Core Frontend
+    // Frontend Development
     { id: 1, name: "JavaScript", category: "Core", icon: <FaJs size={50} /> },
     {
       id: 2,
@@ -28,85 +27,121 @@ export default function Skills() {
       category: "Core",
       icon: <SiTypescript size={50} />,
     },
-    { id: 3, name: "React.js", category: "Core", icon: <FaReact size={50} /> },
+    {
+      id: 3,
+      name: "React.js",
+      category: "Frontend",
+      icon: <FaReact size={50} />,
+    },
     {
       id: 4,
+      name: "Next.js",
+      category: "Frontend",
+      icon: <SiNextdotjs size={50} />,
+    },
+
+    // UI & Styling
+    {
+      id: 5,
       name: "Tailwind CSS",
-      category: "Core",
+      category: "Styling",
       icon: <RiTailwindCssFill size={50} />,
     },
     {
-      id: 5,
+      id: 6,
+      name: "Material UI",
+      category: "UI Library",
+      icon: <SiMui size={50} />,
+    },
+    {
+      id: 7,
+      name: "Bootstrap",
+      category: "Styling",
+      icon: <FaBootstrap size={50} />,
+    },
+    {
+      id: 8,
+      name: "HTML5 / CSS3",
+      category: "Frontend",
+      icon: <FaHtml5 size={50} />,
+    },
+
+    // State Management
+    {
+      id: 9,
       name: "Redux Toolkit",
       category: "State",
       icon: <SiRedux size={50} />,
     },
-    // Tools
     {
-      id: 6,
+      id: 10,
+      name: "React Query",
+      category: "Data Fetching",
+      icon: <SiReactquery size={50} />,
+    },
+
+    // Backend Development
+    {
+      id: 11,
+      name: "Node.js",
+      category: "Backend Basics",
+      icon: <FaNodeJs size={50} />,
+    },
+    {
+      id: 12,
+      name: "NestJS",
+      category: "Learning",
+      icon: <SiNestjs size={50} />,
+    },
+
+    // Tools & Integrations
+    {
+      id: 13,
       name: "Git / GitHub",
       category: "Tools",
       icon: <BsGithub size={50} />,
     },
     {
-      id: 7,
-      name: "Razorpay",
-      category: "Payment",
-      icon: <SiRazorpay size={50} />,
+      id: 14,
+      name: "REST API",
+      category: "Integration",
+      icon: <SiPostman size={50} />,
     },
     {
-      id: 8,
-      name: "PayPal",
-      category: "Payment",
-      icon: <FaPaypal size={50} />,
-    },
-    {
-      id: 9,
-      name: "Google Auth",
-      category: "Auth",
-      icon: <FcGoogle size={50} />,
-    },
-    {
-      id: 10,
-      name: "Apple Auth",
-      category: "Auth",
-      icon: <FaApple size={50} />,
-    },
-    {
-      id: 11,
-      name: "JWT Auth Flow",
-      category: "Auth",
+      id: 15,
+      name: "JWT Authentication",
+      category: "Security",
       icon: <MdSecurity size={50} />,
     },
     {
-      id: 12,
-      name: "AI Integration (Gemini / ChatGPT)",
+      id: 16,
+      name: "AI Integration",
       category: "AI",
       icon: <SiOpenai size={50} />,
     },
     {
-      id: 13,
+      id: 17,
       name: "Data Visualization",
       category: "Charts",
       icon: <SiChartdotjs size={50} />,
     },
     {
-      id: 14,
+      id: 18,
       name: "Responsive Design",
       category: "UI/UX",
       icon: <MdDevices size={50} />,
     },
     {
-      id: 15,
-      name: "Reusable Components",
-      category: "Architecture",
-      icon: <MdViewModule size={50} />,
+      id: 19,
+      name: "Express.js",
+      category: "Backend",
+      icon: <SiExpress size={50} />,
     },
     {
-      id: 16,
-      name: "UI/UX Thinking",
-      category: "Design",
-      icon: <MdDesignServices size={50} />,
+      id: 20,
+      name: "Postman",
+      category: "API Testing",
+      icon: <SiPostman size={50} />,
     },
   ]);
 
@@ -114,17 +149,18 @@ export default function Skills() {
     {
       id: 1,
       company: "Nstack Softech",
-      role: "Frontend Engineer",
+      role: "Software Developer",
       period: "Jan 2025 - Present",
       points: [
-        "Developed scalable and high-performance web applications using React and TypeScript",
-        "Built dynamic dashboards with charts, filters, and real-time data handling",
-        "Implemented complex form workflows with validation and optimized user experience",
-        "Integrated payment gateways including Razorpay and PayPal for secure transactions",
-        "Developed authentication systems using JWT, Google, and Apple login",
-        "Collaborated directly with clients, including on-site work, to deliver real-world solutions",
-        "Designed reusable component architecture to improve development efficiency and maintainability",
-        "Optimized application performance through code splitting, lazy loading, and state management improvements",
+        "Developed scalable and high-performance web applications using React.js, TypeScript, and modern frontend technologies",
+        "Worked with React.js and Next.js based on project requirements to build responsive and SEO-friendly applications",
+        "Built complex dashboards with dynamic charts, data visualization, filters, and API integrations",
+        "Implemented reusable UI components and scalable frontend architectures using Tailwind CSS, Material UI, and other styling libraries",
+        "Developed complex form workflows with Formik, React Hook Form, and schema-based validation",
+        "Integrated third-party services including Razorpay, PayPal, Google Authentication, and Apple Sign-In",
+        "Implemented efficient state management using Redux Toolkit, Zustand, and React Query",
+        "Optimized application performance through lazy loading, code splitting, and efficient rendering techniques",
+        "Collaborated directly with clients to understand business requirements and deliver practical software solutions",
       ],
       logo: "/assets/nstack.png",
     },
@@ -134,12 +170,12 @@ export default function Skills() {
       role: "Frontend Developer Intern",
       period: "Jul 2024 - Dec 2024",
       points: [
-        "Built responsive and user-friendly interfaces using React and Tailwind CSS",
-        "Developed reusable UI components to ensure consistency across the application",
-        "Integrated REST APIs and handled dynamic data rendering",
-        "Implemented form validation and managed complex form states",
-        "Debugged UI issues and improved application performance",
-        "Collaborated with the development team to deliver production-ready features",
+        "Developed responsive and user-friendly interfaces using React.js, JavaScript, HTML, and CSS",
+        "Created reusable components to maintain consistency and improve development efficiency",
+        "Integrated REST APIs and implemented dynamic data rendering",
+        "Worked with form validation, state management, and API error handling",
+        "Improved UI responsiveness, debugging, and cross-browser compatibility",
+        "Collaborated with senior developers to deliver production-ready features",
       ],
       logo: "/assets/nstack.png",
     },
@@ -167,9 +203,9 @@ export default function Skills() {
               initial={{ opacity: 0, y: 5 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.8,
+                duration: 0.5,
                 ease: "easeOut",
-                delay: skill.id * 0.1,
+                delay: (skill.id - 1) * 0.05,
               }}
               viewport={{ once: true }}
             >
